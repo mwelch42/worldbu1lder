@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>CREATE WORLD</h2>
+<form action="/world" method="post" enctype="multipart/form-data">
+<input name="name" placeholder="World Name"><br>
+<textarea name="rules" placeholder="Rules"></textarea><br>
+<input type="file" name="map"><br>
+<button>Create World</button>
+</form>
+
+<hr>
+
+<h2>ADD MAP</h2>
+<form action="/map" method="post" enctype="multipart/form-data">
+<input name="world_id" placeholder="World ID"><br>
+<input name="parent_id" placeholder="Parent Map ID (optional)"><br>
+<input name="name" placeholder="Map Name"><br>
+<input type="file" name="image"><br>
+<button>Add Map</button>
+</form>
+
+<hr>
+
+<h2>CHARACTER</h2>
+<form action="/character" method="post">
+<input name="world_id" placeholder="World ID"><br>
+<input name="name" placeholder="Name"><br>
+<textarea name="bio"></textarea><br>
+<button>Create</button>
+</form>
+
+<hr>
+
+<h2>CHARACTER ART</h2>
+<form action="/art" method="post" enctype="multipart/form-data">
+<input name="character_id" placeholder="Character ID"><br>
+<input type="file" name="image"><br>
+<button>Upload</button>
+</form>
+
+<hr>
+
+<h2>LORE</h2>
+<form action="/lore" method="post">
+<input name="world_id"><br>
+<textarea name="text"></textarea><br>
+<button>Add Lore</button>
+</form>
+
+<hr>
+
+<h2>STORY</h2>
+<form action="/story" method="post">
+<input name="world_id"><br>
+<textarea name="text"></textarea><br>
+<button>Add Story</button>
+</form>
+
+<hr>
+
+<h2>CHECK TEXT</h2>
+<form action="/check" method="post">
+<textarea name="text"></textarea><br>
+<button>Check</button>
+</form>
+
+</body>
+</html>
